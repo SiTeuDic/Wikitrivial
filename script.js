@@ -107,7 +107,7 @@ async function start() {
     generateQuestions();
   } catch (error) {
     alert(
-      "desactiva el adbolock para jugar no hat publi, es un falso positivo"
+      "desactiva el adbolock para jugar no hay publi, es un falso positivo"
     );
     console.error(error);
   }

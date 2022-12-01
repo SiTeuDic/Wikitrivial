@@ -64,3 +64,9 @@ button:hover {
 button:active {
   background-color: rgb(162, 167, 172);
 }
+
+
+.quiz{
+  text-align: center;
+  color:beige;
+}
