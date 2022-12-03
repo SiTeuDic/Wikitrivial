@@ -65,9 +65,7 @@ button {
   font-size: 25px;
   color: var(--color-letra);
 }
-button:hover {
-  background-color: rgb(162, 167, 172);
-}
+
 button:active {
   background-color: rgb(162, 167, 172);
 }
