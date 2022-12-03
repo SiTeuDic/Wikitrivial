@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nabla&family=Outfit:wght@300;400;600&family=Roboto+Slab:wght@500&family=VT323&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Wallpoet&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@
 :root {
   --colorfondo: #f55353;
   --colorSecundario: #143f6b;
-  --font: nabla;
+  --font: Wallpoet;
   --font2: Roboto Slab;
   --table: #e73939d2;
   --color-letra: #0c243b;
@@ -16,12 +17,19 @@ body {
   background-color: var(--colorfondo);
 }
 p {
+  border-radius: 10px;
+  background-color: aliceblue;
   font-size: 25px;
   color: var(--color-letra);
   text-align: center;
   padding: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 6px 19px -3px rgba(0,0,0,0.41);
+
+
 }
 h1 {
+  
   font-family: var(--font);
   letter-spacing: 0px;
 }
@@ -40,8 +48,6 @@ div {
   margin: auto;
   margin-top: 0.5rem;
   border-radius: 10px;
-  background-color: aliceblue;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.623);
   display: flex;
   gap: 2px;
   flex-direction: column;
@@ -54,6 +60,7 @@ button {
   border-radius: 10px;
   padding: 1rem;
   border: 1px solid black;
+  box-shadow: 5px 6px 19px -3px rgba(0,0,0,0.41);
 
   font-size: 25px;
   color: var(--color-letra);
@@ -66,3 +73,81 @@ button:active {
 }
 
 
+.load-wrapp {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 10px 0;
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #d8d8d8;
+}
+/* ////////////////////////////////////// */
+.spinner {
+  align-self: center;
+  margin: 1rem;
+  animation: rotator 1.4s linear infinite;
+}
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+ }
+  100% {
+    transform: rotate(270deg);
+ }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+.spinner {
+	 animation: rotator 3s linear infinite;
+}
+ @keyframes rotator {
+	 0% {
+		 transform: rotate(0deg);
+	}
+	 100% {
+		 transform: rotate(270deg);
+	}
+}
+ .path {
+	 stroke-dasharray: 187;
+	 stroke-dashoffset: 0;
+	 transform-origin: center;
+	 animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+ @keyframes colors {
+	 0% {
+		 stroke: #4285f4;
+	}
+	 25% {
+		 stroke: #de3e35;
+	}
+	 50% {
+		 stroke: #f7c223;
+	}
+	 75% {
+		 stroke: #1b9a59;
+	}
+	 100% {
+		 stroke: #4285f4;
+	}
+}
+ @keyframes dash {
+	 0% {
+		 stroke-dashoffset: 187;
+	}
+	 50% {
+		 stroke-dashoffset: 46.75;
+		 transform: rotate(135deg);
+	}
+	 100% {
+		 stroke-dashoffset: 187;
+		 transform: rotate(450deg);
+	}
+}
